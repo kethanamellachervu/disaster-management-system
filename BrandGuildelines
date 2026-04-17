@@ -1,0 +1,46 @@
+The Master Build Prompt for AntiGravity
+Role: You are a Senior Full-Stack Engineer. Build the "AntiGravity" Disaster Management System using React (Vite), Tailwind CSS, and Firebase (Firestore/Auth).
+
+Core Objective: Create a high-performance, real-time command center for disaster relief. The UI must follow the "AntiGravity" brand guidelines: Deep Space Blue (#0F172A) for backgrounds, Signal Orange (#F97316) for primary actions, and a Bento-box style dashboard.
+
+Technical Requirements:
+
+Authentication: Implement Firebase Auth with three roles: Admin, Volunteer, and Survivor.
+
+Dashboard (The Control Room):
+
+Create a grid of real-time KPI cards: Total Survivors, Available Water/Food, Pending Requests, and Shelter Occupancy %.
+
+Use onSnapshot for real-time Firestore updates.
+
+The Simple Flow Modules:
+
+Incident Creation: Admin form to set location (e.g., Hyderabad), severity (Low/Med/High), and description.
+
+Survivor Registration: A mobile-friendly form that generates a 6-digit uniqueID upon submission.
+
+Resource Management: An inventory list where Admins can track "Total" vs "Available" quantities.
+
+Allocation Logic: A "Deliver" button for requests that atomically decrements inventory using a Firestore transaction.
+
+Shelter Tracking: A visual progress bar for each shelter showing occupied vs. total beds.
+
+UI/UX:
+
+Use Inter for typography and Lucide-React for icons.
+
+Implement Skeleton Loaders for data fetching.
+
+Ensure the layout is "Field-Ready" (large touch targets for volunteers).
+
+Deliverable:
+Please provide the App.jsx structure, the firebaseConfig.js setup, and a Dashboard.jsx component that visualizes these metrics. Use clean, modular code.
+
+Why this prompt works:
+Contextualizes the Stack: It tells the AI exactly which tools to use (Vite, Tailwind, Firestore).
+
+Enforces Business Logic: It explains how the inventory should decrease (atomic transactions), preventing bugs where two people claim the same resource.
+
+Defines the "Vibe": By mentioning the "Deep Space Blue" and "Bento-box" layout, you avoid getting a generic, boring white-and-blue website.
+
+Focuses on Utility: It prioritizes the "Field-Ready" aspect, ensuring the app works for someone holding a phone in a disaster zone.
